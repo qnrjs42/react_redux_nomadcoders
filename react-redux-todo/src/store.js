@@ -1,7 +1,3 @@
-## react redux 연결
-
-```js
-// store.js
 import { createStore } from "redux";
 
 const ADD = "ADD";
@@ -34,20 +30,3 @@ const reducer = (state = [], action) => {
 const store = createStore(reducer);
 
 export default store;
-```
-
-```js
-// index.js
-import React from "react";
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import { Provider } from 'react-redux';
-import store from "./store";
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App></App>
-  </Provider>,
-  document.getElementById("root")
-);
-```
